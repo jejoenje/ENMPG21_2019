@@ -1,8 +1,8 @@
 ---
 title: "ENMPG21: <br>Biodiversity & Ecosystem Services 2019"
-subtitle: "Modelling in conservation science: why and what?"
-author: "Jeroen Minderman"
-date: "13 March 2019 (updated: `r Sys.Date()`)"
+subtitle: "Simulation modelling in conservation decision making: why and what?"
+author: "Jeroen Minderman (jeroen.minderman2@stir.ac.uk)"
+date: "<br><br><br><br><br><br><br>13 March 2019 (<i>updated: `r format(Sys.Date(),'%d/%m/%y')`</i>)"
 output:
   xaringan::moon_reader:
     css: ["default", "metropolis_jm.css", "metropolis_jm-fonts.css"]
@@ -50,12 +50,18 @@ include_graphics("pics/popmanage_banner1.jpg")
   + Quantitative models
   {{content}}
 --
-  + Simulation models
+  + Individual-based models (simulation)
 {{content}}
 
 --
 
-- Examples in conservation & population management
+- Example: oystercatcher IBM
+
+{{content}}
+
+--
+
+- Modelling process: steps and complexity
 
 {{content}}
 
@@ -67,7 +73,7 @@ include_graphics("pics/popmanage_banner1.jpg")
 
 --
 
-- Discussions & excercises
+- Excercises & discussion
 
 {{content}}
 
@@ -109,11 +115,20 @@ include_graphics("pics/fryxell_et_al_small.png")
 ]
 .right-column[
 ### Examples illustrate different purposes
+{{content}}
+]
+--
+
 - **Predicting** animal distributions and/or population dynamics following disturbance or management interventions (e.g. [Stillman et al. 2001](https://besjournals.onlinelibrary.wiley.com/doi/abs/10.1046/j.1365-2664.2001.00644.x), [Nabe-Nielsen et al. 2014](http://www.sciencedirect.com/science/article/pii/S0304380013004675))
+{{content}}
+--
+
 - **Evaluating** effect of policy interventions on species conservation (e.g. [Nicholson et al. 2019](https://linkinghub.elsevier.com/retrieve/pii/S0169534718302519))
+{{content}}
+--
+
 - **Understanding** effect of delayed management responses (e.g. [Fryxell et al. 2010](http://www.sciencemag.org/cgi/doi/10.1126/science.1185802))
 ]
-
 
 ---
 
@@ -132,11 +147,14 @@ include_graphics("pics/targets_set2.png")
 .right-column[
 
 ### The Aichi Biodiversity Targets 
-Convention on Biological Diversity, 
-e.g...
-- **Target 5**: "*By 2020, the rate of <span style="color:blue">loss of all natural habitats</span>, including forests, is <span style="color:blue">at least halved</span> and where feasible brought close to zero, and degradation and fragmentation is significantly reduced.*"
-- **Target 12**: "*By 2020 the <span style="color:blue">extinction of known threatened species has been prevented</span> and their conservation status, particularly of those most in decline, has been improved and sustained.*"
+Convention on Biological Diversity, e.g...
+{{content}}
 ]
+--
+- **Target 12**: "*By 2020 the <span style="color:blue">extinction of known threatened species has been prevented</span> and their conservation status, particularly of those most in decline, has been improved and sustained.*"
+{{content}}
+--
+- **Target 14**: "*By 2020, <span style="color:blue">ecosystems that provide essential services</span>, including services related to water, and contribute to health, livelihoods and well-being, are <span style="color:blue">restored and safeguarded</span>, taking into account the needs of women, indigenous and local communities, and the poor and vulnerable.*"
 
 ---
 
@@ -162,6 +180,18 @@ include_graphics("pics/Nicholson et al 2019_fig1.jpg")
 {{content}}
 --
 - Facilitates systematic use of <span style="color:blue">data</span> & representation of <span style="color:blue">uncertainty</span>
+
+???
+
+(Top left)
+- Trend data and indicators in black. This could be for example the number of threatened species or population trends of a selection of species of concern.
+(Top right)
+- Scenarios are model predictions based on a given set of alternative circumstances. This can play a part in not just agenda setting but also phrasing of the targets themselves, to make sure they are achievable. In this plot, the target level of a given indicator is represented by the red line, and the different scenarios in red - for example a "business as usual" scenario where nothing is done (purple), or alternative strategies in green and blue. 
+(Bottom figures)
+This is a specific example of how models and scenarios could contribute to one of the Aichi targets, target 12 - no further decrease in the number of threatened species as indicated by the Red List Index.
+The first figure represents a statistical model that would just be an extrapolation of a past trend into the future, showing the target is unlikely to be met.
+The second (bottom left) shows a similar sort of review but compared to a counterfactual in orange, that is, a situation where the current decline of species threat status is compared to a situation where nothing had been done - showing we are overall better off.
+In addition, and perhaps more interestingly, alternative ways in which models and scenarios derived from models could be used, is by comparing different policy implementations 
 
 ---
 
@@ -248,16 +278,30 @@ rnorm(10000, 100, 10) # Normal distribution
 ]
 .pull-right[
 
-- State variables  
+- **State variables**  
+{{content}}
+]
+--
   Represent condition/state, e.g.
+  
+{{content}}
+--
   - Population size
   - Stakeholder response
-  
-- Relationships  
+{{content}}
+--
+
+
+- **Relationships**  
+{{content}}
+--
   Represent relationships or effects, e.g.
+  
+{{content}}
+--
   - Effect of predation
   - Management effects
-]
+
 
 ---
 
@@ -320,12 +364,20 @@ $\frac{dN}{dt}=rN\Big(1-\frac{N}{K}\Big)$
 
 $N(t) = \frac{KN_0}{(K-N_0)e^{-rt}+N_0}$
 
+{{content}}
+]
+--
 - N(t) = population size at time *t*
+{{content}}
+--
 - N<sub>0</sub> = initial population size
+{{content}}
+--
 - r = intrinsic population growth rate
+{{content}}
+--
 - K = carrying capacity
 
-]
 
 ---
 
@@ -423,14 +475,16 @@ text(x=1, y=125, paste("r =",r2), cex=2)
 **Disadvantages**
 {{content}}
 --
-- Simple forms not very widely applicable
-{{content}}
---
-- Limited extendability, at least in basic form
-{{content}}
---
 - N function of only one "explanatory variable"
 {{content}}
+--
+- Expanding explanatory variables can require significant maths skills
+{{content}}
+--
+- Difficult to extrapolate beyond parameterised range
+{{content}}
+--
+
 
 ---
 
@@ -473,5 +527,362 @@ knitr::include_graphics("pics/fisheries.png")
 - Needs extensive technical skills to implement
 
 ]
+
+---
+
+# Individual-based models
+
+### IBMs, "Agent-based" models
+
+```{r, echo = FALSE, fig.align='default', out.width = "40%"}
+knitr::include_graphics("pics/Lomicki_cover.png")
+```
+```{r, echo = FALSE, fig.align='default', out.width = "40%"}
+knitr::include_graphics("pics/Sutherland_cover.png")
+```
+
+---
+
+# Individual-based models
+
+```{r, echo = FALSE, fig.align='default', out.width = "90%"}
+knitr::include_graphics("pics/West_etal1.jpg")
+```
+
+---
+
+# Individual-based models
+
+```{r, echo = FALSE, fig.align='default', out.width = "90%"}
+knitr::include_graphics("pics/West_etal2.jpg")
+```
+
+---
+
+# Individual-based models
+
+```{r, echo = FALSE, fig.align='default', out.width = "90%"}
+knitr::include_graphics("pics/West_etal3.jpg")
+```
+
+---
+
+# Individual-based models
+
+Based around **two key principles** (per [Stillman et al. 2015](http://academic.oup.com/bioscience/article/65/2/140/2754218/Making-Predictions-in-a-Changing-World-The))
+
+{{content}}
+
+```{r, echo = FALSE, fig.align='center', out.width = "50%"}
+knitr::include_graphics("pics/oycs_mussles_1.jpg")
+``` 
+--
+
+**1. Emergence**
+  - Population properties arise from individuals:
+  - e.g. behaviour, physiology, genotype
+
+{{content}}
+--
+
+**2. Fitness**
+  - Individual fitness determines success (survival/reproduction)
+  - Individuals aim to maximise fitness
+  - Fitness & environment linked by functions
+
+---
+
+# Individual-based models: Oystercatchers
+
+IBM to predict winter mortality in Oystercatchers (*Haematopus ostralegus*)
+.center[([Stillman et al. 2000](https://besjournals.onlinelibrary.wiley.com/doi/abs/10.1046/j.1365-2664.2000.00506.x))]
+```{r, echo = FALSE, fig.align='center', out.width = "85%"}
+knitr::include_graphics("pics/Stillman_model_3.jpg")
+``` 
+
+---
+
+# Individual-based models: Oystercatchers
+
+IBM to predict winter mortality in Oystercatchers (*Haematopus ostralegus*)
+.center[([Stillman et al. 2000](https://besjournals.onlinelibrary.wiley.com/doi/abs/10.1046/j.1365-2664.2000.00506.x))]
+```{r, echo = FALSE, fig.align='center', out.width = "85%"}
+knitr::include_graphics("pics/Stillman_model_4.jpg")
+``` 
+
+---
+
+# Individual-based models: Oystercatchers
+
+IBM to predict winter mortality in Oystercatchers (*Haematopus ostralegus*)
+.center[([Stillman et al. 2000](https://besjournals.onlinelibrary.wiley.com/doi/abs/10.1046/j.1365-2664.2000.00506.x))]
+```{r, echo = FALSE, fig.align='center', out.width = "85%"}
+knitr::include_graphics("pics/Stillman_model_5.jpg")
+``` 
+
+---
+
+# Individual-based models: Oystercatchers
+
+IBM to predict winter mortality in Oystercatchers (*Haematopus ostralegus*)
+.center[([Stillman et al. 2000](https://besjournals.onlinelibrary.wiley.com/doi/abs/10.1046/j.1365-2664.2000.00506.x))]
+```{r, echo = FALSE, fig.align='center', out.width = "85%"}
+knitr::include_graphics("pics/Stillman_model_6.jpg")
+``` 
+
+---
+
+# Individual-based models: Oystercatchers
+
+IBM to predict winter mortality in Oystercatchers (*Haematopus ostralegus*)
+.center[([Stillman et al. 2000](https://besjournals.onlinelibrary.wiley.com/doi/abs/10.1046/j.1365-2664.2000.00506.x))]
+```{r, echo = FALSE, fig.align='center', out.width = "85%"}
+knitr::include_graphics("pics/Stillman_model_7.jpg")
+``` 
+
+---
+
+# Individual-based models: Oystercatchers
+
+IBM to predict winter mortality in Oystercatchers (*Haematopus ostralegus*)
+.center[([Stillman et al. 2000](https://besjournals.onlinelibrary.wiley.com/doi/abs/10.1046/j.1365-2664.2000.00506.x))]
+```{r, echo = FALSE, fig.align='center', out.width = "85%"}
+knitr::include_graphics("pics/Stillman_model_8.jpg")
+``` 
+
+---
+
+# Individual-based models: Oystercatchers
+
+IBM to predict winter mortality in Oystercatchers (*Haematopus ostralegus*)
+.center[([Stillman et al. 2000](https://besjournals.onlinelibrary.wiley.com/doi/abs/10.1046/j.1365-2664.2000.00506.x))]
+```{r, echo = FALSE, fig.align='center', out.width = "85%"}
+knitr::include_graphics("pics/Stillman_model_9.jpg")
+``` 
+
+---
+
+# Individual-based models: Oystercatchers
+
+### Model validation ([Stillman et al. 2000](https://besjournals.onlinelibrary.wiley.com/doi/abs/10.1046/j.1365-2664.2000.00506.x))
+
+.pull-left[
+### Intake rate predictions
+```{r, echo = FALSE, fig.align='center', out.width = "85%"}
+knitr::include_graphics("pics/Stillman2000_8.jpg")
+``` 
+]
+
+.pull-right[
+### Mortality predictions
+```{r, echo = FALSE, fig.align='center', out.width = "75%"}
+knitr::include_graphics("pics/Stillman2000_2.jpg")
+``` 
+```{r, echo = FALSE, fig.align='center', out.width = "75%"}
+knitr::include_graphics("pics/Stillman2000_3b.jpg")
+``` 
+
+]
+
+---
+
+# Individual-based models: Oystercatchers
+
+### IBM assessing effects of disturbance ([West et al. 2000](http://www.sciencedirect.com/science/article/pii/S0006320701002579))
+
+Disturbance scenarios on feeding areas: (a) 10% of area; (b) 50% of area
+
+```{r, echo = FALSE, fig.align='center', out.width = "100%"}
+knitr::include_graphics("pics/West_etal_1.jpg")
+``` 
+
+```{r, echo = FALSE, fig.align='center', out.width = "50%"}
+knitr::include_graphics("pics/disturbances.jpg")
+``` 
+
+
+---
+
+# Individual-based models
+
+.pull-left[
+### Individual-based models
+- Usually need fewer historical population data.
+- Fitness maximisation likely to hold in future - extrapolation possible
+- Individual variability implicitly accounted for.
+- Needs data on and understanding of behaviour
+- Quickly becomes very complex
+]
+--
+.pull-right[
+### Population-level models
+- Usually needs more historical data to "fit"
+- Limited extrapolative power
+- "Tyranny of the mean"
+- No need for individual-level data
+- Basic forms easy to build "out of the box"
+]
+
+```{r, echo = FALSE, fig.align="center", fig.show = "hold", out.width = "80%",}
+knitr::include_graphics("pics/oycs_mussles_23.jpg")
+``` 
+
+---
+
+# Modelling process
+
+### The modelling cycle ([Schmolke *et al.* 2010](https://linkinghub.elsevier.com/retrieve/pii/S016953471000100X))
+  
+```{r, echo = FALSE, fig.align="center", fig.show = "hold", out.width = "60%",}
+knitr::include_graphics("pics/modelling_cycle.png")
+``` 
+
+???
+
+1. Define problem / questions
+  - Response/outcome?
+  - Explanatory variables?
+2. Construct/revise model
+  - Model form?
+  - Structure
+3. Parameterise
+  - May influence (2)
+  - Literature or data collection?
+4. Predict & evaluate
+  - Do predictions match observations?
+  - e.g. cross-validation
+  
+???
+
+---
+
+# Modelling process
+
+## Model complexity (1): Extremes of complexity...
+
+Both models predict population size....
+.pull-left[
+### Logistic population model
+
+$N(t) = \frac{KN_0}{(K-N_0)e^{-rt}+N_0}$
+{{content}}
+]
+--
+- ***Four*** parameters (including *time*)
+--
+
+.pull-right[
+{{content}}
+]
+--
+### IB population model
+(e.g. [Stillman et al. 2000](https://besjournals.onlinelibrary.wiley.com/doi/abs/10.1046/j.1365-2664.2000.00506.x))
+{{content}}
+--
+```{r, echo = FALSE, fig.align="center", fig.show = "hold", out.width = "75%"}
+knitr::include_graphics("pics/stillman2000_sens1.jpg")
+```
+
+---
+
+# Modelling process
+
+## Model complexity (1): Extremes of complexity...
+
+Both models predict population size... directly or indirectly
+.pull-left[
+### Logistic population model
+
+$N(t) = \frac{KN_0}{(K-N_0)e^{-rt}+N_0}$
+- ***Four*** parameters (including *time*)
+]
+
+.pull-right[
+### IB population model
+(e.g. [Stillman et al. 2000](https://besjournals.onlinelibrary.wiley.com/doi/abs/10.1046/j.1365-2664.2000.00506.x))
+
+- At least **31 parameters** - likely more!
+]
+
+--
+
+.center[**Advantages? Disadvantages?**]
+
+---
+
+# Modelling process
+
+## Model complexity (2): how many parameters to draw an elephant?
+
+.pull-left[
+```{r, echo = FALSE, fig.align="default", fig.show = "hold", out.width = "100%",}
+knitr::include_graphics("pics/elephant.jpg")
+``` 
+]
+
+.pull-right[
+- Adapted from [Burnham & Anderson (1998)](https://books.google.co.uk/books/about/Model_Selection_and_Inference.html?id=0HHwAAAAMAAJ&redir_esc=y)
+]
+
+---
+
+# Modelling process
+
+## Model complexity (2): how many parameters to draw an elephant?
+
+.pull-left[
+```{r, echo = FALSE, fig.align="center", fig.show = "hold", out.width = "100%",}
+knitr::include_graphics("pics/howtodrawanelephant.jpg")
+``` 
+]
+
+.pull-right[
+- Adapted from [Burnham & Anderson (1998)](https://books.google.co.uk/books/about/Model_Selection_and_Inference.html?id=0HHwAAAAMAAJ&redir_esc=y)
+
+{{content}}
+]
+--
+- "Bias" trades off with "variance"
+
+{{content}}
+--
+- "Overfit" vs. "underfit"
+
+{{content}}
+--
+- Complexity vs. practicality?
+
+{{content}}
+--
+- <span style="color:blue">Important in applied settings</span>; e.g. conservation decision making.
+
+---
+
+# Summary
+
+.left-column[
+  ```{r, out.width = "90%", echo=FALSE}
+include_graphics("pics/popmanage_banner1.jpg")
+```
+]
+
+.right-column[
+- Models are <span style="color:blue">formalised and simplified representations</span> of states (e.g. populations) and relationships between states (e.g. effects)
+
+- Models can provide... 
+  + <span style="color:blue">Understanding</span> of systems
+  + Make and test <span style="color:blue">predictions</span> where otherwise not possible
+  + Ability to <span style="color:blue">evaluate</span> alternative management options (e.g. scenarios)
+  
+- Many model <span style="color:blue">types</span> (e.g. conceptual to IBM)
+
+- Need to balance <span style="color:blue">complexity</span> with <span style="color:blue">practicality</span>
+]
+
+---
+
+background-image: url(https://farm5.staticflickr.com/4523/38669697181_e1a6e5511c_k.jpg)
+background-position: 50% 50%
+class: center, inverse
 
 ---
