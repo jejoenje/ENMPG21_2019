@@ -27,15 +27,39 @@ include_graphics("pics/banner2.jpg")
 ```
 ]
 .right-column[
-- Revisting conservation management complexity
-  - Not all animals are alike...
-  - Not all humans are alike...
-  - Socio-economic systems
-- Need to consider stakeholders
-- Management Strategy Evalutation
-- GMSE & how it is different
-- Application of GMSE: Islay geese
+
+{{content}}
 ]
+--
+- Revisiting conservation management complexity
+
+{{content}}
+--
+  - Not all animals are alike...
+{{content}}
+--
+  - Not all humans are alike...
+{{content}}
+--
+  - Socio-economic systems
+
+{{content}}
+--
+- Need to consider stakeholders
+
+{{content}}
+--
+- Management Strategy Evaluation
+
+{{content}}
+--
+- GMSE, its features & methods
+
+{{content}}
+--
+- Application of GMSE: goose population management
+
+
 ---
 
 # Management complexity
@@ -292,6 +316,12 @@ Explicitly accounts for and separates..
 
 # MSE key advantage: uncertainty
 
+.footnote[
+.center[
+[Milner-Gulland & Rowcliffe 2007](https://global.oup.com/academic/product/conservation-and-sustainable-use-9780198530350?cc=gb&lang=en&), [Bunnefeld *et al*. 2011](https://www-sciencedirect-com.ezproxy.stir.ac.uk/science/article/pii/S0169534711001339)
+]
+]
+
 .pull-left[
 ```{r, out.width = "100%", echo=FALSE, out.width = "100%", fig.align="center"}
 include_graphics("pics/MSE_uncertain2.jpg")  
@@ -299,22 +329,30 @@ include_graphics("pics/MSE_uncertain2.jpg")
 ]
 .pull-right[
 **<span style="color:blue">Process</span> uncertainty**
-- Stochasticity in natural populations
-- "Error"
-- What are the "correct" parameters?
-
-- c.f. parameter estimation error, residual error
+{{content}}
 ]
+--
+- Stochasticity in natural populations
+{{content}}
+--
+- "Error"
+{{content}}
+--
+- What are the "correct" parameters?
+{{content}}
+--
+- c.f. parameter estimation error, residual error
+
+
+---
+
+# MSE key advantage: uncertainty
 
 .footnote[
 .center[
 [Milner-Gulland & Rowcliffe 2007](https://global.oup.com/academic/product/conservation-and-sustainable-use-9780198530350?cc=gb&lang=en&), [Bunnefeld *et al*. 2011](https://www-sciencedirect-com.ezproxy.stir.ac.uk/science/article/pii/S0169534711001339)
 ]
 ]
-
----
-
-# MSE key advantage: uncertainty
 
 .pull-left[
 ```{r, out.width = "100%", echo=FALSE, out.width = "100%", fig.align="center"}
@@ -323,21 +361,26 @@ include_graphics("pics/MSE_uncertain3.jpg")
 ]
 .pull-right[
 **<span style="color:blue">Monitoring</span> uncertainty**
-- Irrespective of process uncertainty
-- Observations naturally imperfect (poor/limited survey etc)
-
-- Note - not accounted for in "classic" statistical population models
+{{content}}
 ]
+--
+- Irrespective of process uncertainty
+{{content}}
+--
+- Observations naturally imperfect (poor/limited survey etc)
+{{content}}
+--
+- Note - not accounted for in "classic" statistical population models
+
+---
+
+# MSE key advantage: uncertainty
 
 .footnote[
 .center[
 [Milner-Gulland & Rowcliffe 2007](https://global.oup.com/academic/product/conservation-and-sustainable-use-9780198530350?cc=gb&lang=en&), [Bunnefeld *et al*. 2011](https://www-sciencedirect-com.ezproxy.stir.ac.uk/science/article/pii/S0169534711001339)
 ]
 ]
-
----
-
-# MSE key advantage: uncertainty
 
 .pull-left[
 ```{r, out.width = "100%", echo=FALSE, out.width = "100%", fig.align="center"}
@@ -345,25 +388,30 @@ include_graphics("pics/MSE_uncertain4.jpg")
 ```
 ]
 .pull-right[
-
 **<span style="color:blue">Structural</span> uncertainty**
+{{content}}
+]
+--
 - Lack of understanding of the "true" system
+{{content}}
+--
 - How does it respond to changes in management/environment?
+{{content}}
+--
 - "Model uncertainty"
-
+{{content}}
+--
 - c.f. statistical model selection
 
-]
+---
+
+# MSE key advantage: uncertainty
 
 .footnote[
 .center[
 [Milner-Gulland & Rowcliffe 2007](https://global.oup.com/academic/product/conservation-and-sustainable-use-9780198530350?cc=gb&lang=en&), [Bunnefeld *et al*. 2011](https://www-sciencedirect-com.ezproxy.stir.ac.uk/science/article/pii/S0169534711001339)
 ]
 ]
-
----
-
-# MSE key advantage: uncertainty
 
 .pull-left[
 ```{r, out.width = "100%", echo=FALSE, out.width = "100%", fig.align="center"}
@@ -372,18 +420,20 @@ include_graphics("pics/MSE_uncertain5.jpg")
 ]
 .pull-right[
 **<span style="color:blue">Implementation</span> uncertainty**
+{{content}}
+]
+--
 - Impartial or poor implementation of management/policy
+{{content}}
+--
 - e.g...
   - Institutional inertia
+{{content}}
+--
   - Limited compliance
+{{content}}
+--
   - Practical limits to reaching quotas
-]
-
-.footnote[
-.center[
-[Milner-Gulland & Rowcliffe 2007](https://global.oup.com/academic/product/conservation-and-sustainable-use-9780198530350?cc=gb&lang=en&), [Bunnefeld *et al*. 2011](https://www-sciencedirect-com.ezproxy.stir.ac.uk/science/article/pii/S0169534711001339)
-]
-]
 
 ---
 # GMSE: introduction
@@ -394,7 +444,7 @@ include_graphics("pics/MSE_uncertain5.jpg")
 
 # GMSE: methods
 
-## Basic structure
+## Basic structure (1)
 
 .pull-left[
 ```{r, out.width = "100%", echo=FALSE, out.width = "100%", fig.align="center"}
@@ -404,16 +454,78 @@ include_graphics("pics/GMSE_structure.jpg")
 .pull-right[
 [**Duthie et al. 2018**](http://doi.wiley.com/10.1111/2041-210X.13091)
 
-- Manager "observes" resource
-- Manager sets cost of actions for users, based on resource observation & population target
-- Users choose action based on costs set and own 
+{{content}}
 ]
+--
+**1. Individual resources** on landscape "cells"
+  - Births, deaths, movement between cells, interaction with landcape
+ 
+{{content}}
+--
+**2. Observations of resource**
+  - incl. sampling error
 
 ---
 
 # GMSE: methods
 
-## Genetic algorithm
+## Basic structure (2)
+
+.pull-left[
+```{r, out.width = "100%", echo=FALSE, out.width = "100%", fig.align="center"}
+include_graphics("pics/GMSE_structure.jpg")  
+```
+]
+.pull-right[
+[**Duthie et al. 2018**](http://doi.wiley.com/10.1111/2041-210X.13091)
+
+**3. Managers**
+{{content}}
+]
+--
+- Compare observation with target
+{{content}}
+--
+- Given constraints (maximum "budget")...
+{{content}}
+--
+- Set costs of different actions, aiming to minimise deviation from target <br>
+  *(given e.g. predicted consequences of actions)*
+
+---
+
+# GMSE: methods
+
+## Basic structure (3)
+
+.pull-left[
+```{r, out.width = "100%", echo=FALSE, out.width = "100%", fig.align="center"}
+include_graphics("pics/GMSE_structure.jpg")  
+```
+]
+.pull-right[
+[**Duthie et al. 2018**](http://doi.wiley.com/10.1111/2041-210X.13091)
+
+**4. Users**
+
+{{content}}
+]
+--
+- Within constraints ("budget")...
+{{content}}
+--
+- Choose action that maximises "utility" <br>
+  (e.g. landscape yield, resource use)
+{{content}}
+--
+- Current actions: cull resource, scare resource, castrate resource, 
+feed resource, help resource offspring
+
+---
+
+# GMSE: methods
+
+## Selecting actions: genetic algorithm
 
 ```{r, out.width = "100%", echo=FALSE, out.width = "100%", fig.align="center"}
 include_graphics("pics/GMSE_genalg.jpg")  
@@ -426,6 +538,143 @@ Each time step:
 
 ---
 
-# Example use of GMSE
+# Example use of GMSE: Taiga bean goose (1)
 
-## Geese
+## *Anser fabalis*
+
+.pull-left[
+```{r, out.width = "80%", echo=FALSE, fig.align="center"}
+include_graphics("pics/tbg_map.jpg")  
+```
+```{r, out.width = "80%", echo=FALSE, fig.align="center"}
+include_graphics("pics/tbg_sweden_pop_aewa.jpg")  
+```
+]
+
+.pull-right[
+```{r, out.width = "80%", echo=FALSE, fig.align="center"}
+include_graphics("pics/tbg_theinecke.jpg")  
+```
+```{r, out.width = "70%", echo=FALSE, fig.align="center"}
+include_graphics("pics/goosehunter.jpg")  
+```
+]
+
+.footnote[
+<br>
+<br>
+[T. Heinecke, AEWA Single Species Action Planning Workshop](https://riista.fi/wp-content/uploads/2013/11/AEWA_TaigaBG_Overview_Heinicke.pdf)
+]
+
+---
+
+# Example use of GMSE: Taiga bean goose (2)
+
+.pull-left[
+```{r, out.width = "60%", echo=FALSE, fig.align="center"}
+include_graphics("pics/tbg_theinecke.jpg")  
+```
+```{r, out.width = "80%", echo=FALSE, fig.align="center"}
+include_graphics("pics/tbg_central_map_aewa.jpg")  
+```
+]
+
+.pull-right[
+**Population parameters based on [Johnson et al. (2018)](https://esajournals.onlinelibrary.wiley.com/doi/full/10.1002/eap.1659) and [AEWA (2016)](https://www.unep-aewa.org/sites/default/files/publication/ts56_issap_tbg_0.pdf)**
+
+{{content}}
+]
+
+--
+- Central population = 35000 individuals
+{{content}}
+--
+- Mean reproductive rate ~ 0.55 = 0.275 = $\lambda$  (half of pop'n = female)
+{{content}}
+--
+- Goose survival = 0.878, i.e. prob. of death = 1 - 0.878 = 0.122
+{{content}}
+--
+- AEWA target for population = 70000
+
+---
+
+# Example use of GMSE: Taiga bean goose (3)
+
+.pull-left[
+```{r, out.width = "60%", echo=FALSE, fig.align="center"}
+include_graphics("pics/tbg_theinecke.jpg")  
+```
+```{r, out.width = "80%", echo=FALSE, fig.align="center"}
+include_graphics("pics/tbg_central_map_aewa2.jpg")  
+```
+]
+
+.pull-right[
+**Hypothetical management unit**
+
+{{content}}
+]
+--
+- 60% private (farm) land, 40% public land
+{{content}}
+--
+- 80 individual farmers
+{{content}}
+--
+- 100x100 unit landscape, so each farmer = 75 units
+{{content}}
+--
+- Single goose reduces yield by 0.02% per time step
+
+---
+
+# Example use of GMSE: Taiga bean goose (4)
+
+### Simulations with <span style="color:brown">**culling**</span> as only option
+
+```{r, out.width = "80%", echo=FALSE, fig.align="center"}
+include_graphics("pics/GMSE_tbg_1.jpg")  
+```
+
+---
+
+# Example use of GMSE: Taiga bean goose (5)
+
+### Simulations with both <span style="color:brown">**culling**</span> and <span style="color:green">**scaring**</span> as options
+
+```{r, out.width = "75%", echo=FALSE, fig.align="center"}
+include_graphics("pics/GMSE_tbg_2.jpg")  
+```
+
+---
+
+# Summary
+
+.left-column[
+```{r, out.width = "80%", echo=FALSE, fig.align="center"}
+include_graphics("pics/banner2.jpg")  
+```
+]
+.right-column[
+- Effective management of natural resources needs consideration of variation in..
+
+{{content}}
+]
+--
+  - .. resource behaviour
+{{content}}
+--
+  - .. stakeholder behaviour
+{{content}}
+--
+
+- MSE allows integration of uncertainty
+{{content}}
+--
+  - Process, observation, structural, implementation
+
+{{content}}
+--
+- GMSE is a flexible implementation of MSE, allowing specification of population, observation, management and user models.
+
