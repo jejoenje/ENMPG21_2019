@@ -1,0 +1,431 @@
+---
+title: "ENMPG21: <br>Biodiversity & Ecosystem Services 2019"
+subtitle: "Simulation modelling & management strategy evaluation"
+author: "Jeroen Minderman (jeroen.minderman2@stir.ac.uk)"
+date: "<br><br><br><br><br><br><br>20 March 2019 (<i>updated: `r format(Sys.Date(),'%d/%m/%y')`</i>)"
+output:
+  xaringan::moon_reader:
+    css: ["default", "metropolis_jm.css", "metropolis_jm-fonts.css"]
+    lib_dir: libs
+    nature:
+      highlightStyle: github
+      highlightLines: true
+      countIncrementalSlides: false
+      titleSlideClass: [top, left]
+---
+``` {r echo=FALSE}
+library(knitr)
+source('lgFunc.r')
+
+```
+
+# Overview
+
+.left-column[
+```{r, out.width = "100%", echo=FALSE, fig.align="center"}
+include_graphics("pics/banner2.jpg")  
+```
+]
+.right-column[
+- Revisting conservation management complexity
+  - Not all animals are alike...
+  - Not all humans are alike...
+  - Socio-economic systems
+- Need to consider stakeholders
+- Management Strategy Evalutation
+- GMSE & how it is different
+- Application of GMSE: Islay geese
+]
+---
+
+# Management complexity
+```{r, out.width = "100%", echo=FALSE, fig.align="center"}
+include_graphics("pics/basicharvest0.jpg")  
+```
+---
+
+# Management complexity
+```{r, out.width = "100%", echo=FALSE, fig.align="center"}
+include_graphics("pics/basicharvest1.jpg")  
+```
+---
+
+# Management complexity
+```{r, out.width = "100%", echo=FALSE, fig.align="center"}
+include_graphics("pics/basicharvest2.jpg")  
+```
+---
+
+# Management complexity
+```{r, out.width = "100%", echo=FALSE, fig.align="center"}
+include_graphics("pics/basicharvest3.jpg")  
+```
+---
+
+# Management complexity
+```{r, out.width = "100%", echo=FALSE, fig.align="center"}
+include_graphics("pics/basicharvest4.jpg")  
+```
+
+---
+# Management complexity
+```{r, out.width = "100%", echo=FALSE, fig.align="center"}
+include_graphics("pics/basicharvest5.jpg")  
+```
+
+---
+
+# Management complexity
+
+### Simple harvest rules can lead to population collapse
+
+.pull-left[
+```{r, out.width = "100%", echo=FALSE, fig.align="center"}
+include_graphics("pics/hutchings94_codpop.jpg")  
+```
+```{r, out.width = "100%", echo=FALSE, fig.align="center"}
+include_graphics("pics/hutchings94_catches.jpg")  
+```
+]
+.pull-right[
+```{r, out.width = "100%", echo=FALSE, fig.align="center"}
+include_graphics("https://www.thepacket.ca/media/photologue/photos/cache/TEL-A01-24032018-Cod_large.jpg")  
+```
+.center[
+  Atlantic cod (*Gadus morhua*)
+  [Hutchings & Myers 1994](https://www.nrcresearchpress.com/doi/abs/10.1139/f94-214)
+  ]
+]
+
+---
+
+# Management complexity
+
+### Ignoring individual behaviour affects projections
+
+.pull-left[
+```{r, out.width = "80%", echo=FALSE, fig.align="center"}
+include_graphics("pics/Keriberiou_Fig5.jpg")
+```
+]
+.pull-right[
+.center[
+Red-billed chough (*Pyrrhocorax pyrrhocorax*)
+[Kerbiriou et al 2009](http://besjournals.onlinelibrary.wiley.com/doi/abs/10.1111/j.1365-2664.2009.01646.x)
+]
+```{r, out.width = "50%", echo=FALSE, fig.align="center"}
+include_graphics("pics/Chough.jpg")
+```
+```{r, out.width = "80%", echo=FALSE, fig.align="center"}
+include_graphics("pics/Keriberiou_Fig4.jpg")
+```
+
+]
+
+---
+
+# Management in socio-economic systems
+
+```{r, out.width = "100%", echo=FALSE, fig.align="center"}
+include_graphics("pics/Ostrom_framew_2009.jpg")  
+```
+
+.center[[Ostrom (2009)](http://science.sciencemag.org/content/325/5939/419)]
+
+---
+
+# Management in socio-economic systems
+
+## Consideration of **wildlife** as well as **people**
+
+.pull-left[
+```{r, out.width = "80%", echo=FALSE, fig.align="center"}
+include_graphics("pics/lions.jpg")
+```
+
+```{r, out.width = "80%", echo=FALSE, fig.align="center"}
+include_graphics("pics/barnies.jpg")
+```
+]
+--
+.pull-right[
+```{r, out.width = "80%", echo=FALSE, fig.align="center"}
+include_graphics("pics/bushmeat2.jpg")
+```
+
+```{r, out.width = "80%", echo=FALSE, fig.align="center"}
+include_graphics("pics/birdwatchers.jpg")
+```
+]
+
+---
+
+# Importance of stakeholders (1)
+
+## Variation in behaviour: motivations
+
+.pull-left[
+```{r, out.width = "100%", echo=FALSE, fig.align="center"}
+include_graphics("pics/williams19_F1.jpg")  
+```
+```{r, out.width = "100%", echo=FALSE, fig.align="center"}
+include_graphics("pics/williams19_S3b.jpg")  
+```
+]
+
+.pull-right[
+```{r, out.width = "100%", echo=FALSE, fig.align="center"}
+include_graphics("pics/goosehunter.jpg")  
+```
+.center[
+Pink-footed goose (*Anser brachyrhynchus*) hunters in Denmark
+([Williams *et al.* 2019](https://doi.org/10.1007/s13280-018-1070-7))
+]
+]
+
+---
+
+# Importance of stakeholders (2)
+
+## Variation in behaviour: compliance
+
+.pull-left[
+```{r, out.width = "100%", echo=FALSE, fig.align="center"}
+include_graphics("https://ichef.bbci.co.uk/news/624/cpsprodpb/D1A2/production/_98166635_gettyimages-465169758.jpg")  
+```
+```{r, out.width = "100%", echo=FALSE, fig.align="center", fig.cap="Getty Images"}
+include_graphics("https://ichef.bbci.co.uk/news/660/cpsprodpb/15C61/production/_98158198_gettyimages-124754995.jpg")  
+```
+]
+
+.pull-right[
+```{r, out.width = "100%", echo=FALSE, fig.align="center"}
+include_graphics("pics/wittemeyer2014_F1a.jpg")  
+```
+<br>Illegal killing for ivory drives global decline in African elephants ([Wittemeyer *et al*. 2014](https://www.pnas.org/content/111/36/13117))
+]
+
+
+---
+
+# Adaptive Management
+
+.pull-left[
+```{r, out.width = "150%", echo=FALSE, fig.align="center"}
+include_graphics("pics/AMcycle.jpg")  
+```
+Diagram from [Bunnefeld *et al*. (2015)](http://public.eblib.com/choice/publicfullrecord.aspx?p=4866274)
+
+]
+.pull-right[
+{{content}}
+]
+--
+- <span style="color:blue">Cyclical process</span> aimed at updating strategy based on previous results
+
+{{content}}
+--
+- Consideration of stakeholder responses usually limited to purely economic drivers (e.g. fishing fleets).
+
+{{content}}
+--
+- <span style="color:blue">**Individual stakeholder behaviour** rarely (if ever) included</span>
+
+
+
+
+---
+
+# Management Strategy Evaluation (MSE)
+
+## Definition?
+
+"*..assessing the consequences of a range of management strategies or options and presenting the results in a way that
+lays bare the trade-offs in performance across a range of
+management objectives*"
+([Smith *et al*. 1999](https://academic.oup.com/icesjms/article/56/6/967/658156))
+
+"*MSE uses simulation models within an adaptive framework that enables the comparison of alternative strategies in a 
+virtual world under multiple (and often conflicting) objectives*"
+([Bunnefeld *et al*. 2011](https://www-sciencedirect-com.ezproxy.stir.ac.uk/science/article/pii/S0169534711001339))
+<br>
+<br>
+- Focus on <span style="color:blue">**idenfitication of trade-offs**</span> rather than "optimal" solution
+- Allows decision makers to make trade-offs depending on context, preferences, etc.
+
+---
+
+# Management Strategy Evaluation (MSE)
+
+## Structure
+
+.pull-left[
+```{r, out.width = "100%", echo=FALSE, fig.align="center"}
+include_graphics("pics/MSE_Bunnefeld_2011.jpg")  
+```
+.center[Figure from [Bunnefeld et al. 2011](https://www-sciencedirect-com.ezproxy.stir.ac.uk/science/article/pii/S0169534711001339)]
+]
+.pull-right[
+Explicitly accounts for and separates..
+
+{{content}}
+]
+--
+1. **Resource dynamics**
+
+{{content}}
+--
+2. **Observation process**
+    - Detection? Biases?
+
+{{content}}
+--
+3. **Manager decisions**
+    - Preference? Bias?
+
+{{content}}
+--
+4. **User decisions**
+    - Behaviour? Compliance?
+
+---
+
+# MSE key advantage: uncertainty
+
+.pull-left[
+```{r, out.width = "100%", echo=FALSE, out.width = "100%", fig.align="center"}
+include_graphics("pics/MSE_uncertain2.jpg")  
+```
+]
+.pull-right[
+**<span style="color:blue">Process</span> uncertainty**
+- Stochasticity in natural populations
+- "Error"
+- What are the "correct" parameters?
+
+- c.f. parameter estimation error, residual error
+]
+
+.footnote[
+.center[
+[Milner-Gulland & Rowcliffe 2007](https://global.oup.com/academic/product/conservation-and-sustainable-use-9780198530350?cc=gb&lang=en&), [Bunnefeld *et al*. 2011](https://www-sciencedirect-com.ezproxy.stir.ac.uk/science/article/pii/S0169534711001339)
+]
+]
+
+---
+
+# MSE key advantage: uncertainty
+
+.pull-left[
+```{r, out.width = "100%", echo=FALSE, out.width = "100%", fig.align="center"}
+include_graphics("pics/MSE_uncertain3.jpg")  
+```
+]
+.pull-right[
+**<span style="color:blue">Monitoring</span> uncertainty**
+- Irrespective of process uncertainty
+- Observations naturally imperfect (poor/limited survey etc)
+
+- Note - not accounted for in "classic" statistical population models
+]
+
+.footnote[
+.center[
+[Milner-Gulland & Rowcliffe 2007](https://global.oup.com/academic/product/conservation-and-sustainable-use-9780198530350?cc=gb&lang=en&), [Bunnefeld *et al*. 2011](https://www-sciencedirect-com.ezproxy.stir.ac.uk/science/article/pii/S0169534711001339)
+]
+]
+
+---
+
+# MSE key advantage: uncertainty
+
+.pull-left[
+```{r, out.width = "100%", echo=FALSE, out.width = "100%", fig.align="center"}
+include_graphics("pics/MSE_uncertain4.jpg")  
+```
+]
+.pull-right[
+
+**<span style="color:blue">Structural</span> uncertainty**
+- Lack of understanding of the "true" system
+- How does it respond to changes in management/environment?
+- "Model uncertainty"
+
+- c.f. statistical model selection
+
+]
+
+.footnote[
+.center[
+[Milner-Gulland & Rowcliffe 2007](https://global.oup.com/academic/product/conservation-and-sustainable-use-9780198530350?cc=gb&lang=en&), [Bunnefeld *et al*. 2011](https://www-sciencedirect-com.ezproxy.stir.ac.uk/science/article/pii/S0169534711001339)
+]
+]
+
+---
+
+# MSE key advantage: uncertainty
+
+.pull-left[
+```{r, out.width = "100%", echo=FALSE, out.width = "100%", fig.align="center"}
+include_graphics("pics/MSE_uncertain5.jpg")  
+```
+]
+.pull-right[
+**<span style="color:blue">Implementation</span> uncertainty**
+- Impartial or poor implementation of management/policy
+- e.g...
+  - Institutional inertia
+  - Limited compliance
+  - Practical limits to reaching quotas
+]
+
+.footnote[
+.center[
+[Milner-Gulland & Rowcliffe 2007](https://global.oup.com/academic/product/conservation-and-sustainable-use-9780198530350?cc=gb&lang=en&), [Bunnefeld *et al*. 2011](https://www-sciencedirect-com.ezproxy.stir.ac.uk/science/article/pii/S0169534711001339)
+]
+]
+
+---
+# GMSE: introduction
+
+[![](pics/GMSE_www.jpg)](https://confoobio.github.io/gmse/)
+
+---
+
+# GMSE: methods
+
+## Basic structure
+
+.pull-left[
+```{r, out.width = "100%", echo=FALSE, out.width = "100%", fig.align="center"}
+include_graphics("pics/GMSE_structure.jpg")  
+```
+]
+.pull-right[
+[**Duthie et al. 2018**](http://doi.wiley.com/10.1111/2041-210X.13091)
+
+- Manager "observes" resource
+- Manager sets cost of actions for users, based on resource observation & population target
+- Users choose action based on costs set and own 
+]
+
+---
+
+# GMSE: methods
+
+## Genetic algorithm
+
+```{r, out.width = "100%", echo=FALSE, out.width = "100%", fig.align="center"}
+include_graphics("pics/GMSE_genalg.jpg")  
+```
+
+Each time step:
+1. Run genetic algorithm (GA) for each agent (manager and each user)
+2. GA simulates "evolution by natural selection" of "population" of agent decisions
+3. Highest fitness strategy chosen as agent's decision
+
+---
+
+# Example use of GMSE
+
+## Geese

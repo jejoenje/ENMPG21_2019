@@ -1,0 +1,2 @@
+ssim <- gmse(lambda = 0.3, land_ownership = TRUE, time_max = 100, plotting = T, tend_crops = T, manager_budget = 700, user_budget = 1300, 
+            stakeholders = 10, public_land = 0.5, manage_caution = 0.25, agent_view = 5, remove_pr=0.05);
