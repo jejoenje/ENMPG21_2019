@@ -63,37 +63,37 @@ include_graphics("pics/banner2.jpg")
 ---
 
 # Management complexity
-```{r, out.width = "100%", echo=FALSE, fig.align="center"}
+```{r, out.width = "95%", echo=FALSE, fig.align="center"}
 include_graphics("pics/basicharvest0.jpg")  
 ```
 ---
 
 # Management complexity
-```{r, out.width = "100%", echo=FALSE, fig.align="center"}
+```{r, out.width = "95%", echo=FALSE, fig.align="center"}
 include_graphics("pics/basicharvest1.jpg")  
 ```
 ---
 
 # Management complexity
-```{r, out.width = "100%", echo=FALSE, fig.align="center"}
+```{r, out.width = "95%", echo=FALSE, fig.align="center"}
 include_graphics("pics/basicharvest2.jpg")  
 ```
 ---
 
 # Management complexity
-```{r, out.width = "100%", echo=FALSE, fig.align="center"}
+```{r, out.width = "95%", echo=FALSE, fig.align="center"}
 include_graphics("pics/basicharvest3.jpg")  
 ```
 ---
 
 # Management complexity
-```{r, out.width = "100%", echo=FALSE, fig.align="center"}
+```{r, out.width = "95%", echo=FALSE, fig.align="center"}
 include_graphics("pics/basicharvest4.jpg")  
 ```
 
 ---
 # Management complexity
-```{r, out.width = "100%", echo=FALSE, fig.align="center"}
+```{r, out.width = "95%", echo=FALSE, fig.align="center"}
 include_graphics("pics/basicharvest5.jpg")  
 ```
 
@@ -438,8 +438,9 @@ include_graphics("pics/MSE_uncertain5.jpg")
 ---
 # GMSE: introduction
 
-[![](pics/GMSE_www.jpg)](https://confoobio.github.io/gmse/)
-
+```{r, out.width = "75%", echo=FALSE, out.width = "100%", fig.align="center"}
+include_graphics("pics/GMSE_www.jpg")  
+```
 ---
 
 # GMSE: methods
@@ -472,7 +473,7 @@ include_graphics("pics/GMSE_structure.jpg")
 ## Basic structure (2)
 
 .pull-left[
-```{r, out.width = "100%", echo=FALSE, out.width = "100%", fig.align="center"}
+```{r, echo=FALSE, out.width = "90%", fig.align="center"}
 include_graphics("pics/GMSE_structure.jpg")  
 ```
 ]
