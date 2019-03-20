@@ -46,3 +46,16 @@ include_graphics("https://raw.githubusercontent.com/bradduthie/gmse/1727ea37f32f
 
 ]
 
+---
+
+# GMSE simulations
+
+## Try answering the following questions - 
+
+1. How does the ratio between user budget and manager budget affect population change?
+
+2. How could you model increased "error" in the population? Hint: look at the GMSE help page (?gmse)
+
+3. Assess how changing the amount an individual affects the landscape interacts with different management actions?
+
+
