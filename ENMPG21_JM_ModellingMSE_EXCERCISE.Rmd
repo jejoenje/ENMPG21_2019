@@ -39,5 +39,10 @@ library(knitr)
 ```{r, out.width = "100%", echo=FALSE, out.width = "100%", fig.align="center"}
 include_graphics("https://upload.wikimedia.org/wikipedia/commons/thumb/1/1b/R_logo.svg/724px-R_logo.svg.png")  
 ```
+<br>
+```{r, out.width = "80%", echo=FALSE, fig.align="center"}
+include_graphics("https://raw.githubusercontent.com/bradduthie/gmse/1727ea37f32f0f40df8ee6e8277d0d1723c88639/notebook/images/GMSE_logo_name.png")  
+```
+
 ]
 
